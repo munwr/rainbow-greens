@@ -6,20 +6,26 @@ import ContentCard from "../components/content-card"
 import EmailSubscription from "../components/email-subscription"
 import ShowsHome from "../components/shows-home"
 
+const styles = {
+  container: {
+    'display': 'grid',
+    'grid-template-columns': ['1fr', '1fr', '1fr 1fr'],
+    'grid-gap': '30px',
+    'align-items': 'center'
+  },
+  slider: {}
+}
 export default function Home() {
   return (
     <Layout>
-      <div sx={{
-        'display': 'grid',
-        'grid-template-columns': '1fr 1fr',
-        'grid-gap': '30px',
-        }}
+      <div 
+        sx={styles.container}
       >
-        <Slider/>
+        <Slider sx={styles.slider}/>
         <ContentCard/>
       </div>
       <EmailSubscription/>
-      <ShowsHome/>
+      <ShowsHome />
     </Layout>
   )
 }

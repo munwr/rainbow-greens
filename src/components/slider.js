@@ -2,10 +2,16 @@ import React from 'react'
 import { Carousel } from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 
-export default function Slider() {
+export default function Slider(props) {
   return (
     <div>
-      <Carousel showStatus={false} showThumbs={false} showIndicators={true} showArrows={false}>
+      <Carousel 
+        {...props}
+        showStatus={false} 
+        showThumbs={false} 
+        showIndicators={true} 
+        showArrows={false}
+      >
         <div>
           <img src="https://source.unsplash.com/random/640x500" alt="1"/>
         </div>

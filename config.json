@@ -27,6 +27,7 @@
       "buttonSubscription": "#492827",
       "footerBg": "#F2F0F0",
       "buttonBg": "#EB7B7B",
+      "buttonBgHover": "#EB6565",
       "buttonText": "#FFFAF1",
       "socialIcons": "#B2B2B2"
     }

@@ -25,7 +25,18 @@ export default {
   },
   styles: {
     root: {
-      fontFamily: 'body'
+      fontFamily: 'body',
+      'img': {
+        maxWidth: '100%'
+      }
+    }
+  },
+  variants: {
+    container: {
+      maxWidth: "1280px",
+      m: "0 auto",
+      pt: [3, 4, 4, 5],
+      px: [3, 4, 4, 5]
     }
   }
 }
