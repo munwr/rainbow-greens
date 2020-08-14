@@ -4,7 +4,6 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import theme from '../gatsby-plugin-theme-ui'
 import { useStaticQuery, graphql } from 'gatsby'
-import SiteMetaData from './site-meta-data'
 
 export default function Layout( props ) {
   const data = useStaticQuery(graphql`
