@@ -10,28 +10,42 @@ import {
   FaRss 
 } from 'react-icons/fa'
 
-export default function ContentCard() {
+export default function ContentCard(props) {
+  const info = {
+    title: props.title || 'Not Available',
+    description: props.description || "Not Available",
+    twitter: props.twitter || "",
+    rss: props.rss || "",
+    facebook: props.facebook || ""
+  }
+  const excerpt = info.description.substring(0, 140) + '...'
   return (
     <div sx={styles.container}>
-      <h1 sx={styles.heading}>Rainbow Greens Podcast</h1>
-      <p sx={styles.description}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos aspernatur quas a quasi cumque maiores similique, distinctio eligendi ut illo harum. Porro, consequuntur ipsa inventore asperiores corrupti officiis quaerat? Corrupti!</p>
-      <Button to="/shows">
-        Explore Now
+      <h1 sx={styles.heading}>{info.title}</h1>
+      <p sx={styles.description}>{excerpt}</p>
+      <Button to="/about">
+        Know more
         <MdPlayArrow/>
       </Button>
       <div sx={styles.socialContainer}>
-        <Link to="#">
-          <span sx={styles.hidden}>RSS</span>
-          <FaRss/>
-        </Link>
-        <Link to="/">
-          <span sx={styles.hidden}>Twitter</span>
-          <FaTwitter/>
-        </Link>
-        <Link to="#">
-          <span sx={styles.hidden}>Facebook</span>
-          <FaFacebookSquare/>
-        </Link>
+        {info.rss && (
+          <Link to={info.rss}>
+            <span sx={styles.hidden}>RSS</span>
+            <FaRss/>
+          </Link>
+        )}
+        {info.twitter && (
+          <Link to={info.twitter}>
+            <span sx={styles.hidden}>Twitter</span>
+            <FaTwitter/>
+          </Link>
+        )}
+        {info.facebook && (
+          <Link to={info.facebook}>
+            <span sx={styles.hidden}>Facebook</span>
+            <FaFacebookSquare/>
+          </Link>
+        )}
         <p>Stay in connected with us</p>
       </div>
     </div>

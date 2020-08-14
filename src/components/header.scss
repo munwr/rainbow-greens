@@ -1,0 +1,21 @@
+@media (max-width: 56em) {
+  .menu-open + ul {
+    display: 'block';
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 16px 0;
+    z-index: 999;
+    li {
+      display: block
+    }
+    li a {
+      display: block;
+      padding: 16px;
+    }
+  }
+  .menu-close + ul {
+    display: none;
+  }
+}

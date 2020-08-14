@@ -8,7 +8,8 @@ const config = require("./config.json")
 module.exports = {
   siteMetadata: config.siteMetadata,
   plugins: [
-    'gatsby-plugin-theme-ui',
+    `gatsby-plugin-theme-ui`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
+import { useStaticQuery, graphql } from 'gatsby'
 import Layout from "../components/layout"
 import Slider from "../components/slider"
 import ContentCard from "../components/content-card"
@@ -16,13 +17,27 @@ const styles = {
   slider: {}
 }
 export default function Home() {
+  const data = useStaticQuery(graphql`
+    query SiteQueryTwo {
+      site {
+        siteMetadata {
+          description
+          facebook
+          rss
+          title
+          twitter
+        }
+      }
+    }
+  `)
+  const { siteMetadata } = data.site
   return (
     <Layout>
       <div 
         sx={styles.container}
       >
         <Slider sx={styles.slider}/>
-        <ContentCard/>
+        <ContentCard {...siteMetadata} />
       </div>
       <EmailSubscription/>
       <ShowsHome />
