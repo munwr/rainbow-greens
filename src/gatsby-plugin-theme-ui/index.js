@@ -1,4 +1,7 @@
+import config from "../../config.json"
+
 export default {
+  ...config.theme,
   breakpoints: [
     '40em', '56em', '64em', '90em'
   ],
@@ -19,10 +22,6 @@ export default {
   lineHeights: {
     body: 1.5,
     heading: 1.125
-  },
-  colors: {
-    text: '#333',
-    background: '#fff',
   },
   styles: {
     root: {

@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import EpisodeCard from './episode-card'
+import config from '../../config.json'
 
 class PopulateEpisodes extends React.Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class PopulateEpisodes extends React.Component {
   componentDidMount() {
     axios({
       method: 'get',
-      url: 'https://adoriapi.netlify.app/episodes.json',
+      url: config.apiURL,
       responseType: 'json'
     })
       .then(response => {
@@ -35,7 +36,3 @@ class PopulateEpisodes extends React.Component {
 }
 
 export default PopulateEpisodes
-
-// function PopulateEpisodes() {
-  
-// }

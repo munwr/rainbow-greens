@@ -13,7 +13,7 @@ export default function Home() {
           'grid-gap': '30px'
         }}
       >
-        <img src="https://source.unsplash.com/random/640x480" alt="image" />
+        <img src="https://source.unsplash.com/random/640x480" alt="About" />
         <div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum architecto quae tempora et quibusdam accusantium beatae! Itaque exercitationem, aut dolores esse non doloribus, repellat voluptas saepe beatae voluptatibus officiis ullam!</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum architecto quae tempora et quibusdam accusantium beatae! Itaque exercitationem, aut dolores esse non doloribus, repellat voluptas saepe beatae voluptatibus officiis ullam!</p>
